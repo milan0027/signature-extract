@@ -10,12 +10,19 @@ def homepage():
 
 @app.route('/detect', methods=['POST'])
 def predict():
-    file = request.files.get('image', '')
-    # Read the image via file.stream
-    img = Image.open(file)
-    result = detect(img)
+    try:
 
-    return jsonify({'result':result})
+        file = request.files.get('image', '')
+        # Read the image via file.stream
+        img = Image.open(file)
+        result = detect(img)
+
+        return jsonify({'result':result})
+    except Exception as e:
+        print(e)
+        return ''
+        
+        
 
 
 

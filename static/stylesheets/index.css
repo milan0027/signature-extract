@@ -1,7 +1,10 @@
+body{
+    padding: 1.5rem;
+}
+
 .input-group {
     width: 50% !important;
     margin-top: 1rem;
-    margin-left: 1rem;
     margin-bottom: 1rem;
     
 }
@@ -11,22 +14,33 @@
     background-color: black;
     color: white;
     height: 2.2rem;
-    border-radius: 0.25rem;
     margin-left: 1rem;
+    border-radius: 0.25rem;
 }
 
 #upload_btn:disabled{
     background-color: gray;
 }
 
-#result-list{
-   margin-left: 1rem;
-}
+
 #result-list img{
-    margin-top: 2rem;
-    display: block;
+    border: 1px solid black;
+    margin-right: 2rem;
 }
 
-h2{
-    margin-left: 1rem;
+#result-list div{
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
 }
+
+#result-list button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    height: 2.2rem;
+    border-radius: 0.25rem;
+}
+
