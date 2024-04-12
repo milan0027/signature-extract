@@ -2,3 +2,4 @@ flask
 ultralytics
 cvzone
 numpy
+gunicorn
