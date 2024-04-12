@@ -1,9 +1,8 @@
+#detects signature using model and crops them, finally returns the array of signatures in base64 format
 from ultralytics import YOLO
 import cv2
 import base64
-import cvzone
 import numpy as np
-from PIL import Image
 import math
 model = YOLO('best.pt')
 color=(0,0,255)
@@ -27,6 +26,10 @@ def detect(img):
         boxes = r.boxes
        
         for box in boxes:
+            #continue for logo detected
+            if(box.cls == 0):
+                continue
+
             x1,y1,x2,y2 = box.xyxy[0]
             x1 = int(x1)
             y1 = int(y1)

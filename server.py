@@ -1,3 +1,4 @@
+#contains flask route apis
 from flask import Flask, request, jsonify, render_template
 from PIL import Image
 from code1 import detect
@@ -21,12 +22,7 @@ def predict():
     except Exception as e:
         print(e)
         return ''
-        
-        
-
-
-
-
+    
 
 if __name__ == '__main__':
     app.run()

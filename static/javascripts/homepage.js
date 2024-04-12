@@ -1,3 +1,4 @@
+//js file for homepage, handles logics for showing signatures and status
 const resultDiv = document.getElementById('result-list')
 const uploadBtn = document.getElementById('upload_btn')
 const statusText = document.getElementById('status-text')
